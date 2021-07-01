@@ -1,0 +1,11 @@
+footer {
+  background-color: #ada7c9;
+  color: white;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+a#footer-link {
+  text-decoration: none;
+}
