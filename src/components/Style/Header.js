@@ -1,13 +1,16 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import "./Header.css";
+import logo from "../../assets/images/movie-logo.png";
 
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          Movie Night
-        </a>
+        <NavLink className="navbar-brand" to="/">
+          <img src={logo} alt="Movie Night" />
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,36 +25,36 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a id="head-link" className="nav-link" href="/">
+              <NavLink id="head-link" className="nav-link" to="/">
                 Movies
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a id="head-link" className="nav-link" href="/">
+              <NavLink id="head-link" className="nav-link" to="/">
                 TV Shows
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a id="head-link" className="nav-link" href="/">
+              <NavLink id="head-link" className="nav-link" to="/">
                 Free
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a id="head-link" className="nav-link" href="/">
+              <NavLink id="head-link" className="nav-link" to="/">
                 My Movie Night
-              </a>
+              </NavLink>
             </li>
           </ul>
           <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a id="head-link" className="nav-link" href="/">
+              <NavLink id="head-link" className="nav-link" to="/">
                 Log In
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a id="head-link" className="nav-link" href="/">
+              <NavLink id="head-link" className="nav-link" to="/registration">
                 Sign Up
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
