@@ -7,6 +7,7 @@ import AboutUs from "../src/components/AboutUs/AboutUs";
 import Terms from "../src/components/Terms/Terms";
 import Registration from "../src/components/Registration/Registration";
 import Login from "./components/Registration/Login";
+import ForgotPassword from "./components/Registration/ForgotPassword";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/forgotpassword">
+            <ForgotPassword />
           </Route>
         </Switch>
         <Footer />
