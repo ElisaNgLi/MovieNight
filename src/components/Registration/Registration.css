@@ -26,3 +26,11 @@
 .invalid-field.invalid input {
   border-color: red;
 }
+
+@media (min-width: 280px) and (max-width: 653px) {
+  .card.registration {
+    width: 18rem;
+    margin: 0 auto;
+    float: none;
+  }
+}
