@@ -1,27 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import TwitterIcon from "@material-ui/icons/Twitter";
 
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer mt-auto py-3 text-center text-lg-start">
-      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <div className="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
-        <div>
-          <Link to="/" className="me-4 text-reset">
-            <i className="fab fa-facebook-f"></i>
-          </Link>
-          <Link to="/" className="me-4 text-reset">
-            <i className="fab fa-twitter"></i>
-          </Link>
-          <Link to="/" className="me-4 text-reset">
-            <i className="fab fa-instagram"></i>
-          </Link>
-        </div>
-      </section>
       <div className="container text-center text-md-start mt-5">
         <div className="row mt-3">
           <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -73,6 +60,40 @@ const Footer = () => {
               <Link id="footer-link" to="/terms" className="text-reset">
                 Terms and Condition
               </Link>
+            </p>
+          </div>
+
+          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 className="text-uppercase fw-bold mb-4">Follow Us</h6>
+            <p>
+              <a
+                id="footer-link"
+                href="https://www.facebook.com/netflixcanada/?brand_redir=475822799216240"
+                className="text-reset"
+              >
+                <FacebookIcon />
+                Facebook
+              </a>
+            </p>
+            <p>
+              <a
+                id="footer-link"
+                href="https://www.instagram.com/netflixca/"
+                className="text-reset"
+              >
+                <InstagramIcon />
+                Instagram
+              </a>
+            </p>
+            <p>
+              <a
+                id="footer-link"
+                href="https://twitter.com/netflix"
+                className="text-reset"
+              >
+                <TwitterIcon />
+                Twitter
+              </a>
             </p>
           </div>
         </div>
