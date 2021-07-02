@@ -8,6 +8,7 @@ import Terms from "../src/components/Terms/Terms";
 import Registration from "../src/components/Registration/Registration";
 import Login from "./components/Registration/Login";
 import ForgotPassword from "./components/Registration/ForgotPassword";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path="/forgotpassword">
             <ForgotPassword />
+          </Route>
+          <Route exact path="/">
+            <Home />
           </Route>
         </Switch>
         <Footer />
