@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 import "./Registration.css";
 import Title from "../Style/Title";
+import SocialButton from "./SocialButton";
 
 const Registration = () => {
   return (
@@ -74,24 +73,10 @@ const Registration = () => {
             </button>
           </div>
         </form>
-        <div className="mt-4 ">
+        <hr />
+        <div className="mt-3">
           <h4>Or Sign Up with</h4>
-          <div className="d-flex justify-content-center">
-            <div className="row">
-              <div className="col">
-                <button type="submit" className="btn btn-primary btn-lg">
-                  <FacebookIcon />
-                  Facebook
-                </button>
-              </div>
-              <div className="col">
-                <button type="submit" className="btn btn-info btn-lg">
-                  <MailOutlineIcon />
-                  Google
-                </button>
-              </div>
-            </div>
-          </div>
+          <SocialButton />
         </div>
       </div>
     </div>
