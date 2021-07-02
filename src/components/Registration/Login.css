@@ -8,3 +8,7 @@
 #link-pw {
   text-decoration: none;
 }
+
+.invalid-field.invalid input {
+  border-color: red;
+}

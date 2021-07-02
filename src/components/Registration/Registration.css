@@ -12,10 +12,17 @@
   border-radius: 10px;
 }
 
-.advertisement.row,
-p,
-h6 {
+.advertisement p {
   padding: 0;
   margin: 0;
   font-weight: bold;
+}
+.advertisement h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.invalid-field.invalid input {
+  border-color: red;
 }

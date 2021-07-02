@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Registration.css";
@@ -6,6 +6,61 @@ import Title from "../Style/Title";
 import SocialButton from "./SocialButton";
 
 const Registration = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [validateFirstName, setValidFirstName] = useState();
+  const [validateLastName, setValidLastName] = useState();
+  const [validateEmail, setValidEmail] = useState();
+  const [validatePassword, setValidPassword] = useState();
+  const [formIsValid, setFormIsValid] = useState(false);
+
+  const handleFirstName = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  const handleLastName = (event) => {
+    setLastName(event.target.value);
+  };
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleValidFirstName = () => {
+    setValidFirstName(firstName.trim().length >= 2);
+  };
+
+  const handleValidLastName = () => {
+    setValidLastName(lastName.trim().length >= 2);
+  };
+
+  const handleValidEmail = () => {
+    setValidEmail(email.includes("@"));
+  };
+
+  const handleValidPassword = () => {
+    setValidPassword(password.trim().length >= 8);
+  };
+
+  useEffect(() => {
+    setFormIsValid(
+      firstName.trim().length >= 2 &&
+        lastName.trim().length >= 2 &&
+        email.includes("@") &&
+        password.trim().length >= 8
+    );
+  }, [firstName, lastName, email, password]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="card registration mt-5 mb-5">
       <div className="card-body">
@@ -33,42 +88,90 @@ const Registration = () => {
             Login Here
           </Link>
         </p>
-        <form className="row g-3 mt-3">
+        <form className="row g-3 mt-3" onSubmit={handleSubmit}>
           <div className="col-md-6">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="First Name"
-              autoFocus
-              required
-            />
+            <div
+              className={`invalid-field ${
+                validateFirstName === false ? "invalid" : ""
+              }`}
+            >
+              <input
+                type="text"
+                className="form-control"
+                placeholder="First Name"
+                value={firstName}
+                onChange={handleFirstName}
+                onBlur={handleValidFirstName}
+                autoFocus
+                required
+              />
+              {validateFirstName === false && (
+                <p>Please enter your first name</p>
+              )}
+            </div>
           </div>
           <div className="col-md-6">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Last Name"
-              required
-            />
+            <div
+              className={`invalid-field ${
+                validateLastName === false ? "invalid" : ""
+              }`}
+            >
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Last Name"
+                value={lastName}
+                onChange={handleLastName}
+                onBlur={handleValidLastName}
+                required
+              />
+              {validateLastName === false && <p>Please enter your last name</p>}
+            </div>
           </div>
           <div className="col-12">
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Email"
-              required
-            />
+            <div
+              className={`invalid-field ${
+                validateEmail === false ? "invalid" : ""
+              }`}
+            >
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Email"
+                value={email}
+                onChange={handleEmail}
+                onBlur={handleValidEmail}
+                required
+              />
+              {validateEmail === false && <p>Please provided a valid email</p>}
+            </div>
           </div>
           <div className="col-12">
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Password"
-              required
-            />
+            <div
+              className={`invalid-field ${
+                validatePassword === false ? "invalid" : ""
+              }`}
+            >
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Password"
+                value={password}
+                onChange={handlePassword}
+                onBlur={handleValidPassword}
+                required
+              />
+              {validatePassword === false && (
+                <p>Password must be at least 8 characters long</p>
+              )}
+            </div>
           </div>
           <div className="text-center">
-            <button type="submit" className="btn btn-primary btn-md">
+            <button
+              type="submit"
+              className="btn btn-primary btn-md"
+              disable={!formIsValid}
+            >
               Sign Up
             </button>
           </div>
