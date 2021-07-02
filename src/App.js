@@ -6,6 +6,7 @@ import Footer from "../src/components/Style/Footer";
 import AboutUs from "../src/components/AboutUs/AboutUs";
 import Terms from "../src/components/Terms/Terms";
 import Registration from "../src/components/Registration/Registration";
+import Login from "./components/Registration/Login";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/registration">
             <Registration />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
         </Switch>
         <Footer />
