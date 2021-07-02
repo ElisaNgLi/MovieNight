@@ -1,12 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
+import "./Registration.css";
 import Title from "../Style/Title";
 
 const Registration = () => {
   return (
-    <div className="card">
+    <div className="card registration mt-5 mb-5">
       <div className="card-body">
+        <div className="advertisement">
+          <div className="row">
+            <div className="col-3 mt-0 mb-0">
+              <p>LIMITED TIME OFFER</p>
+            </div>
+            <div className="col mt-0 mb-0">
+              <p>New user sign up offer</p>
+              <h6>Rent it.Buy it. Get 30% off*</h6>
+              <p>First purchase only*</p>
+            </div>
+            <div className="col-4 mt-0 mb-0">
+              <h6>WATCH FOR FREE</h6>
+              <p>10.000+ Movies + TV SHOWS</p>
+            </div>
+          </div>
+        </div>
         <Title name="Welcome to Movie Night!" />
         <p className="card-subtitle text-center">
           Already have an account?
@@ -50,23 +69,27 @@ const Registration = () => {
             />
           </div>
           <div className="text-center">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary btn-md">
               Sign Up
             </button>
           </div>
         </form>
-        <div className="mt-4">
+        <div className="mt-4 ">
           <h4>Or Sign Up with</h4>
-          <div className="row">
-            <div className="col">
-              <button type="submit" className="btn btn-primary">
-                Facebook
-              </button>
-            </div>
-            <div className="col">
-              <button type="submit" className="btn btn-primary">
-                Google
-              </button>
+          <div className="d-flex justify-content-center">
+            <div className="row">
+              <div className="col">
+                <button type="submit" className="btn btn-primary btn-lg">
+                  <FacebookIcon />
+                  Facebook
+                </button>
+              </div>
+              <div className="col">
+                <button type="submit" className="btn btn-info btn-lg">
+                  <MailOutlineIcon />
+                  Google
+                </button>
+              </div>
             </div>
           </div>
         </div>

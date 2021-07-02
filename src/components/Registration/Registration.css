@@ -1,0 +1,25 @@
+.card.registration {
+  width: 40rem;
+  margin: 0 auto;
+  float: none;
+  border-style: none;
+}
+
+.butto-fb {
+  width: 200px;
+}
+
+.advertisement {
+  background-color: #ada7c9;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.advertisement.row,
+p,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
