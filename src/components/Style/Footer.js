@@ -37,13 +37,8 @@ const Footer = () => {
             </Link>
           </p>
           <p>
-            <Link id="footer-link" to="/" className="text-reset">
+            <Link id="footer-link" to="/myaccount" className="text-reset">
               Account
-            </Link>
-          </p>
-          <p>
-            <Link id="footer-link" to="/" className="text-reset">
-              Settings
             </Link>
           </p>
         </div>

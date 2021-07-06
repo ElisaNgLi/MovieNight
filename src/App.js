@@ -9,6 +9,8 @@ import Registration from "../src/components/Registration/Registration";
 import Login from "./components/Registration/Login";
 import ForgotPassword from "./components/Registration/ForgotPassword";
 import Home from "./components/Home/Home";
+import Account from "./components/Account/Account";
+import ResetPassword from "./components/Account/ResetPassword";
 
 function App() {
   return (
@@ -33,6 +35,12 @@ function App() {
           </Route>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/myaccount">
+            <Account />
+          </Route>
+          <Route path="/resetpassword">
+            <ResetPassword />
           </Route>
         </Switch>
         <Footer />
