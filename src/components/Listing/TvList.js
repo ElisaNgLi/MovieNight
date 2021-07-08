@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Title from "../Style/Title";
 
@@ -20,10 +21,11 @@ const TvList = () => {
         console.log(err.message);
       });
   }, []);
+
   if (isLoading) {
     return (
-      <div className="container">
-        <p>loading</p>
+      <div className="container my-5 mx-5">
+        <h1 className="text-center">Loading Tv Shows...</h1>
       </div>
     );
   } else {
@@ -50,13 +52,16 @@ const TvList = () => {
         <div className="row">
           {tv.map((data) => (
             <div className="col-md my-2 text-center" key={data.id}>
-              <img
-                className="mx-2"
-                src={data.poster_path}
-                alt={data.name}
-                width="200"
-                height="200"
-              />
+              <Link to={`/tv/${data.id}`}>
+                <img
+                  className="mx-2"
+                  src={data.poster_path}
+                  alt={data.name}
+                  width="200"
+                  height="200"
+                />
+              </Link>
+
               <h5 className="mt-2">{data.name}</h5>
             </div>
           ))}
