@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
+import { Link } from "react-router-dom";
 
 import SubTitle from "../Style/SubTitle";
 
@@ -38,8 +39,8 @@ const FeatureMovie = () => {
 
   if (isLoading) {
     return (
-      <div className="container">
-        <p>isLoading...</p>
+      <div className="container my-5 mx-5">
+        <h4 className="text-center">Loading Movies...</h4>
       </div>
     );
   } else {
@@ -51,15 +52,17 @@ const FeatureMovie = () => {
           arrowRight={<div style={{ fontSize: "30px" }}>{" > "}</div>}
           data={random(
             6,
-            movies.map((data, index) => (
-              <img
-                className="mx-2"
-                key={index.toString()}
-                src={data.poster_path}
-                alt={data.title}
-                width="200"
-                height="200"
-              />
+            movies.map((data) => (
+              <Link to={`/movies/${data.id}`}>
+                <img
+                  className="mx-2"
+                  key={data.id}
+                  src={data.poster_path}
+                  alt={data.title}
+                  width="200"
+                  height="200"
+                />
+              </Link>
             ))
           )}
         />
