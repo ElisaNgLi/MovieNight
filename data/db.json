@@ -11,7 +11,8 @@
       "release_date": "2021-06-17",
       "title": "Luca",
       "vote_average": 8.2,
-      "vote_count": 2107
+      "vote_count": 2107,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://ichef.bbci.co.uk/news/976/cpsprodpb/DE86/production/_118966965_2519_d080_00010r.jpg",
@@ -24,7 +25,8 @@
       "release_date": "2021-05-19",
       "title": "F9",
       "vote_average": 7.7,
-      "vote_count": 403
+      "vote_count": 403,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://variety.com/wp-content/uploads/2020/01/a-quiet-place-part-ii-aqp2-03710r_rgb-e1582827101210.jpg?crop=0px%2C568px%2C6000px%2C3381px&resize=681%2C383",
@@ -37,7 +39,8 @@
       "release_date": "2021-05-21",
       "title": "A Quiet Place Part II",
       "vote_average": 7.8,
-      "vote_count": 1359
+      "vote_count": 1359,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://www.rollingstone.com/wp-content/uploads/2021/05/Cruella-Disney-Plus-Emma-Stone.jpeg",
@@ -50,7 +53,8 @@
       "release_date": "2021-05-26",
       "title": "Cruella",
       "vote_average": 8.5,
-      "vote_count": 3744
+      "vote_count": 3744,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://variety.com/wp-content/uploads/2021/05/Wrath-of-Man-1.jpg",
@@ -63,7 +67,8 @@
       "release_date": "2021-04-22",
       "title": "Wrath of Man",
       "vote_average": 7.8,
-      "vote_count": 1238
+      "vote_count": 1238,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://www.catholicnews.com/wp-content/uploads/custom/20210604T1030-MOVIE-REVIEW-CONJURING-DEVIL-1249661.jpg",
@@ -76,7 +81,8 @@
       "release_date": "2021-05-25",
       "title": "The Conjuring: The Devil Made Me Do It",
       "vote_average": 8,
-      "vote_count": 2868
+      "vote_count": 2868,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://www.hollywoodreporter.com/wp-content/uploads/2021/05/10E40_sq1850_sh0030_fr1129_4k-copy.jpg",
@@ -89,7 +95,8 @@
       "release_date": "2021-05-20",
       "title": "Spirit Untamed",
       "vote_average": 7.9,
-      "vote_count": 110
+      "vote_count": 110,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://m.media-amazon.com/images/M/MV5BNjNjMTdkNjUtNzRmNi00ZTZjLTgzMDUtNzBhNTVmODUwM2QxXkEyXkFqcGdeQWFybm8@._V1_.jpg",
@@ -102,7 +109,8 @@
       "release_date": "2021-04-07",
       "title": "Mortal Kombat",
       "vote_average": 7.5,
-      "vote_count": 3204
+      "vote_count": 3204,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://m.media-amazon.com/images/M/MV5BZWVjMmY4ODUtMmYzMC00NDdjLWE4MjMtOWUzMDBlNzczOGMwXkEyXkFqcGdeQWpnYW1i._V1_UX477_CR0,0,477,268_AL_.jpg",
@@ -115,7 +123,8 @@
       "release_date": "2021-03-24",
       "title": "Godzilla vs. Kong",
       "vote_average": 8,
-      "vote_count": 6267
+      "vote_count": 6267,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://i.guim.co.uk/img/media/fbc7f0ea501edbff7a9f46d9b55ba7d0a764a099/0_0_3840_2304/master/3840.jpg?width=1200&quality=85&auto=format&fit=max&s=7380b9043814145cd518f89197e6d858",
@@ -128,7 +137,8 @@
       "release_date": "2021-05-27",
       "title": "Endangered Species",
       "vote_average": 6.6,
-      "vote_count": 57
+      "vote_count": 57,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://m.media-amazon.com/images/M/MV5BN2RkMTVhNzItMzdmZi00MTExLThiN2UtYjhiMDgwNWNjMmE0XkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg",
@@ -141,7 +151,8 @@
       "release_date": "2021-01-15",
       "title": "Wish Dragon",
       "vote_average": 8.3,
-      "vote_count": 339
+      "vote_count": 339,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://variety.com/wp-content/uploads/2021/03/the-unholy.jpg?w=681&h=383&crop=1",
@@ -154,7 +165,8 @@
       "release_date": "2021-03-31",
       "title": "The Unholy",
       "vote_average": 7,
-      "vote_count": 1125
+      "vote_count": 1125,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://purewows3.imgix.net/images/articles/2021_06/fatherhood_review_netflix_kevin_hart.jpg?auto=format,compress&cs=strip",
@@ -167,7 +179,8 @@
       "release_date": "2021-06-18",
       "title": "Fatherhood",
       "vote_average": 8,
-      "vote_count": 478
+      "vote_count": 478,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://m.media-amazon.com/images/M/MV5BNWExYzg4MzktYmZkMi00OTc3LWE2MGUtZTVhMzQyOWFhMzI3XkEyXkFqcGdeQWFybm8@._V1_.jpg",
@@ -180,20 +193,8 @@
       "release_date": "2021-07-01",
       "title": "The Boss Baby: Family Business",
       "vote_average": 7.7,
-      "vote_count": 184
-    },
-    {
-      "backdrop_path": "/g15PR8eQV9DehSWlagvdnJZqoRq.jpg",
-      "genre_ids": [9648, 53, 27],
-      "id": 602734,
-      "original_title": "Spiral: From the Book of Saw",
-      "overview": "Working in the shadow of an esteemed police veteran, brash Detective Ezekiel “Zeke” Banks and his rookie partner take charge of a grisly investigation into murders that are eerily reminiscent of the city’s gruesome past.  Unwittingly entrapped in a deepening mystery, Zeke finds himself at the center of the killer’s morbid game.",
-      "popularity": 869.838,
-      "poster_path": "/lcyKve7nXRFgRyms9M1bndNkKOx.jpg",
-      "release_date": "2021-05-12",
-      "title": "Spiral: From the Book of Saw",
-      "vote_average": 6.4,
-      "vote_count": 501
+      "vote_count": 184,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://lumiere-a.akamaihd.net/v1/images/image_cdfa0bf6.jpeg?region=0,0,1920,1080",
@@ -213,7 +214,8 @@
       "release_date": "2021-03-03",
       "title": "Raya and the Last Dragon",
       "vote_average": 8.1,
-      "vote_count": 3660
+      "vote_count": 3660,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://static.rogerebert.com/uploads/review/primary_image/reviews/the-forever-purge-movie-review-2021/the-forever-purge-movie-review-2021.jpeg",
@@ -226,7 +228,8 @@
       "release_date": "2021-06-30",
       "title": "The Forever Purge",
       "vote_average": 7.2,
-      "vote_count": 16
+      "vote_count": 16,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://www.catholicnews.com/wp-content/uploads/custom/20210326T1215-MOVIE-REVIEW-NOBODY-1244756.jpg",
@@ -239,7 +242,8 @@
       "release_date": "2021-03-26",
       "title": "Nobody",
       "vote_average": 8.4,
-      "vote_count": 2439
+      "vote_count": 2439,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://images.immediate.co.uk/production/volatile/sites/3/2021/06/infinite-ed530b9.jpg?quality=90&resize=620,413",
@@ -252,7 +256,8 @@
       "release_date": "2021-09-08",
       "title": "Infinite",
       "vote_average": 0,
-      "vote_count": 0
+      "vote_count": 0,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210629075053-25-july-streaming-2021-the-tomorrow-war.jpg",
@@ -265,7 +270,8 @@
       "release_date": "2021-07-02",
       "title": "The Tomorrow War",
       "vote_average": 8.5,
-      "vote_count": 1467
+      "vote_count": 1467,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_20/3476526/210520-army-of-the-dead-netflix-jm-2017.jpg",
@@ -278,7 +284,8 @@
       "release_date": "2021-05-14",
       "title": "Army of the Dead",
       "vote_average": 6.5,
-      "vote_count": 1811
+      "vote_count": 1811,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://www.cnet.com/a/img/HBqSwltH81eFbwOSnpPbBMEp5TU=/940x0/2021/06/07/9cbafc31-c577-4001-8d3b-a062fed145ee/awake-20190819-unit-01303-r.jpg",
@@ -291,7 +298,8 @@
       "release_date": "2021-06-09",
       "title": "Awake",
       "vote_average": 6.1,
-      "vote_count": 455
+      "vote_count": 455,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://cdn.vox-cdn.com/thumbor/9EMmYMymU28Kef6ut8yUkLG9IaM=/0x0:3900x2600/1200x675/filters:focal(1107x593:1731x1217)/cdn.vox-cdn.com/uploads/chorus_image/image/69212889/WithoutRemorse2.0.jpeg",
@@ -304,7 +312,8 @@
       "release_date": "2021-04-29",
       "title": "Tom Clancy's Without Remorse",
       "vote_average": 7.2,
-      "vote_count": 1312
+      "vote_count": 1312,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://imgix.bustle.com/uploads/image/2021/2/25/c56922dc-d352-4ee8-8369-8cc3ddfd873f-gib_shot12_100320_eu_1003_td.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg",
@@ -317,7 +326,8 @@
       "release_date": "2021-02-27",
       "title": "Girl in the Basement",
       "vote_average": 8.1,
-      "vote_count": 158
+      "vote_count": 158,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/black-widow-1-1625478834.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*",
@@ -330,7 +340,8 @@
       "release_date": "2021-07-07",
       "title": "Black Widow",
       "vote_average": 8.5,
-      "vote_count": 12
+      "vote_count": 12,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://media.vanityfair.com/photos/541c84101019a3955fea0c49/master/pass/s-vfh-shawshank-redemption-20th-anniversary.jpg",
@@ -343,7 +354,8 @@
       "release_date": "1994-09-23",
       "title": "The Shawshank Redemption",
       "vote_average": 8.7,
-      "vote_count": 19189
+      "vote_count": 19189,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://fangirlish.com/wp-content/uploads/2020/07/Gabriels-Inferno.jpg",
@@ -356,7 +368,8 @@
       "release_date": "2020-07-31",
       "title": "Gabriel's Inferno Part II",
       "vote_average": 8.7,
-      "vote_count": 1277
+      "vote_count": 1277,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://www.biography.com/.image/t_share/MTY4OTUyODMyNTUxMDM2Mzky/hero-image-the-godfather-gettyimages-159837887.jpg",
@@ -369,7 +382,8 @@
       "release_date": "1972-03-14",
       "title": "The Godfather",
       "vote_average": 8.7,
-      "vote_count": 14481
+      "vote_count": 14481,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://ca-times.brightspotcdn.com/dims4/default/683703a/2147483647/strip/true/crop/2048x1152+0+0/resize/1486x836!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F92%2Fa0%2Fd5a2b84cd33d74cfa2c382873d02%2Fla-1543883502-l6spe3ndlo-snap-image",
@@ -382,7 +396,8 @@
       "release_date": "1993-11-30",
       "title": "Schindler's List",
       "vote_average": 8.6,
-      "vote_count": 11525
+      "vote_count": 11525,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://www.hollywoodreporter.com/wp-content/uploads/2019/10/the_green_mile_-_h_-_1999.jpg?w=681&h=383&crop=1",
@@ -395,7 +410,8 @@
       "release_date": "1999-12-10",
       "title": "The Green Mile",
       "vote_average": 8.5,
-      "vote_count": 12438
+      "vote_count": 12438,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://m.media-amazon.com/images/M/MV5BMDc3YmViMGYtYjgyNi00NDg2LTk2MTEtNDVmOTI4ODQ2MzRlXkEyXkFqcGdeQWFybm8@._V1_.jpg",
@@ -408,7 +424,8 @@
       "release_date": "2020-11-27",
       "title": "Life in a Year",
       "vote_average": 8.5,
-      "vote_count": 681
+      "vote_count": 681,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://variety.com/wp-content/uploads/2020/09/wolfwalkers.jpg?w=1000",
@@ -421,7 +438,8 @@
       "release_date": "2020-10-26",
       "title": "Wolfwalkers",
       "vote_average": 8.5,
-      "vote_count": 490
+      "vote_count": 490,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://prod-images.tcm.com/Master-Profile-Images/12angrymen1957.94081.jpg",
@@ -434,7 +452,8 @@
       "release_date": "1957-04-10",
       "title": "12 Angry Men",
       "vote_average": 8.5,
-      "vote_count": 5662
+      "vote_count": 5662,
+      "type": "movie"
     },
     {
       "backdrop_path": "https://www.indiewire.com/wp-content/uploads/2019/07/Screen-Shot-2019-07-22-at-5.09.08-PM.png?w=780",
@@ -447,7 +466,8 @@
       "release_date": "1994-09-10",
       "title": "Pulp Fiction",
       "vote_average": 8.5,
-      "vote_count": 21336
+      "vote_count": 21336,
+      "type": "movie"
     }
   ],
   "tv": [
@@ -463,7 +483,8 @@
       "popularity": 4484.532,
       "poster_path": "https://oyster.ignimgs.com/wordpress/stg.ign.com/2021/05/Loki_Digital_KeyArt_Payoff_v5_lg.jpg",
       "vote_average": 8.1,
-      "vote_count": 4895
+      "vote_count": 4895,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://tvline.com/wp-content/uploads/2021/07/flash-7x16-1.jpg?w=620",
@@ -477,7 +498,8 @@
       "popularity": 1386.055,
       "poster_path": "https://m.media-amazon.com/images/M/MV5BMDIzNzYwNTctZWY4Mi00YjQ2LWI5YWYtMzdmNDgwMGI4Yzk1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
       "vote_average": 7.7,
-      "vote_count": 7966
+      "vote_count": 7966,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://media.cdn.adultswim.com/uploads/20210628/thumbnails/2_21628714375-RickMorty_Inside502.png",
@@ -491,7 +513,8 @@
       "popularity": 1149.282,
       "poster_path": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_.jpg",
       "vote_average": 8.8,
-      "vote_count": 4708
+      "vote_count": 4708,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://www.denofgeek.com/wp-content/uploads/2021/03/superman-and-lois-episode-4-haywire.jpg?resize=768%2C432",
@@ -505,7 +528,8 @@
       "popularity": 642.483,
       "poster_path": "https://m.media-amazon.com/images/M/MV5BOTA2MDVhMWItNTYwYi00OTcyLWJjZmEtNTQ2NTAxMDQyYTQwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "vote_average": 8.3,
-      "vote_count": 1033
+      "vote_count": 1033,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://starwarsblog.starwars.com/wp-content/uploads/2021/04/who-are-the-bad-batch-TALL.jpg",
@@ -519,7 +543,8 @@
       "popularity": 346.453,
       "poster_path": "https://static.wikia.nocookie.net/disney/images/b/b1/Star_Wars_The_Bad_Batch_Teaser_Poster.jpeg/revision/latest?cb=20210417200235",
       "vote_average": 8.6,
-      "vote_count": 369
+      "vote_count": 369,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://media.diariolasamericas.com/p/1601748c0ac6308eaa6538d010444e9d/adjuntos/216/imagenes/002/265/0002265636/william-levy-carmen-villalobos-y-laura-londono-una-escena-la-nueva-version-cafe-aroma-mujer.jpg",
@@ -534,7 +559,8 @@
       "popularity": 226.078,
       "poster_path": "https://upload.wikimedia.org/wikipedia/en/8/8d/Caf%C3%A9_con_aroma_2021_poster.jpg",
       "vote_average": 10,
-      "vote_count": 1
+      "vote_count": 1,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://media.comicbook.com/2021/01/marvel-legends-trailer-1251805-1280x0.jpeg",
@@ -548,7 +574,8 @@
       "popularity": 223.824,
       "poster_path": "https://m.media-amazon.com/images/M/MV5BNGE3ODYyNDYtODk1NS00ODRmLTk5YTYtOGMyMTZkYTEyODhlXkEyXkFqcGdeQXVyODQ4MjU1MDk@._V1_.jpg",
       "vote_average": 7.6,
-      "vote_count": 444
+      "vote_count": 444,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://img.republicworld.com/republic-prod/stories/promolarge/xhdpi/s6bnhdwj2dda7mck_1589359200.jpeg",
@@ -562,7 +589,8 @@
       "popularity": 223.405,
       "poster_path": "https://m.media-amazon.com/images/M/MV5BYmJiMGIwMWYtMzZmOS00NGEyLWE2ZjktOWM0NDdjNTgzZTBjXkEyXkFqcGdeQXVyMTAwMzM3NDI3._V1_.jpg",
       "vote_average": 7.3,
-      "vote_count": 49
+      "vote_count": 49,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://pyxis.nymag.com/v1/imgs/a9e/7ce/14814739754bddab5038165215da38627e-04-highschool-musical-the-series.rsocial.w1200.jpg",
@@ -576,7 +604,8 @@
       "popularity": 175.894,
       "poster_path": "https://lumiere-a.akamaihd.net/v1/images/p_fyc_hsmtmts_19097_eaf2f1c8.jpeg?region=0%2C0%2C540%2C810",
       "vote_average": 8.2,
-      "vote_count": 606
+      "vote_count": 606,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://deadline.com/wp-content/uploads/2020/01/american-dad-2.jpg",
@@ -590,7 +619,8 @@
       "popularity": 166.79,
       "poster_path": "https://m.media-amazon.com/images/M/MV5BNDRkOWIyOTUtMjg5YS00OTJjLTgwNGYtMjgxMTA0NWQ2NGI3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
       "vote_average": 6.8,
-      "vote_count": 1323
+      "vote_count": 1323,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2021/01/legends-of-tomorrow.jpg",
@@ -604,7 +634,8 @@
       "popularity": 164.187,
       "poster_path": "https://m.media-amazon.com/images/M/MV5BNDUxM2YwODYtYTNlMy00NzZjLWE0MzktYWNhY2MxNWJlMmRlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "vote_average": 7.3,
-      "vote_count": 1649
+      "vote_count": 1649,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://static.tvtropes.org/pmwiki/pub/images/Iamnotananimal.jpg",
@@ -619,7 +650,8 @@
       "popularity": 10.292,
       "poster_path": "https://upload.wikimedia.org/wikipedia/en/d/d1/I_Am_Not_an_Animal_DVD_cover.jpeg",
       "vote_average": 9.3,
-      "vote_count": 633
+      "vote_count": 633,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://static.billboard.com/files/media/BTS-run-2017-billboard-1548-compressed.jpg",
@@ -634,7 +666,8 @@
       "popularity": 35.24,
       "poster_path": "https://i.mydramalist.com/p3l4r_4f.jpg",
       "vote_average": 9.1,
-      "vote_count": 116
+      "vote_count": 116,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://spice.eplus.jp/images/XSzizvAutHScGHH9Q9N8WQ9Xx1FVC1VF616AVk3OyLPFm12y55bV1B9YyZPeeO3x",
@@ -649,7 +682,8 @@
       "popularity": 32.788,
       "poster_path": "https://images-na.ssl-images-amazon.com/images/I/9194z5r8wXL.jpg",
       "vote_average": 9.1,
-      "vote_count": 482
+      "vote_count": 482,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://livedoor.sp.blogimg.jp/guran2016_ms06/imgs/c/9/c9697b0f.jpg",
@@ -664,7 +698,8 @@
       "popularity": 31.825,
       "poster_path": "https://cdn.kdkw.jp/cover_1000/322007/322007000166.jpg",
       "vote_average": 9.1,
-      "vote_count": 548
+      "vote_count": 548,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://cdn.lecturernews.com/news/photo/202102/60862_233882_558.png",
@@ -679,7 +714,8 @@
       "popularity": 41.779,
       "poster_path": "https://newsimg.sedaily.com/2021/02/04/22IEGV233M_1.jpg",
       "vote_average": 9,
-      "vote_count": 153
+      "vote_count": 153,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://otakukart.com/wp-content/uploads/2021/04/Welcome-to-Demon-School-Iruma-kun-Season-2-Episode-3-Preview-and-Recap.jpg",
@@ -694,7 +730,8 @@
       "popularity": 56.759,
       "poster_path": "https://m.media-amazon.com/images/M/MV5BYzgyNmIzODYtNTM1ZC00ZTcwLWFhYzktOTM4NGVhYzE3MzA2XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
       "vote_average": 8.9,
-      "vote_count": 129
+      "vote_count": 129,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://qph.fs.quoracdn.net/main-qimg-19c7afa145bfab73423f341984fa071d",
@@ -709,7 +746,8 @@
       "popularity": 67.794,
       "poster_path": "https://images-na.ssl-images-amazon.com/images/I/81Wa1SptVVL.jpg",
       "vote_average": 8.9,
-      "vote_count": 1470
+      "vote_count": 1470,
+      "type": "tv"
     },
     {
       "backdrop_path": "https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0212%2Ffea3e9bap00qoez6g0070c000gh009bm.png&thumbnail=650x2147483647&quality=80&type=jpg",
@@ -724,7 +762,8 @@
       "popularity": 36.287,
       "poster_path": "https://i0.hdslb.com/bfs/bangumi/image/00843865ea13702eccc4efd64c313fd4c8029c6b.jpg",
       "vote_average": 8.9,
-      "vote_count": 173
+      "vote_count": 173,
+      "type": "tv"
     },
     {
       "backdrop_path": "http://ojsfile.ohmynews.com/CT_T_IMG/2021/0503/IE002800568_LT.JPG",
@@ -739,7 +778,8 @@
       "popularity": 79.316,
       "poster_path": "https://upload.wikimedia.org/wikipedia/ko/c/c2/%EB%B9%88%EC%84%BC%EC%A1%B0_%28%EB%93%9C%EB%9D%BC%EB%A7%88%29_-_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpeg",
       "vote_average": 8.9,
-      "vote_count": 226
+      "vote_count": 226,
+      "type": "tv"
     }
   ]
 }
