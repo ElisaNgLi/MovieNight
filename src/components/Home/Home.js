@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Home.css";
 import image from "../../assets/images/movie.jpg";
-const Home = (props) => {
+import SubTitle from "../Style/SubTitle";
+import FeatureMovie from "./FeatureMovie";
+import FeatureTv from "./FeatureTv";
+import Content from "./Content";
+
+const Home = () => {
+  const [movies, setMovies] = useState(null);
+  const [tv, setTv] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/movies")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setMovies(data);
+      });
+    fetch("http://localhost:8000/tv")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setTv(data);
+      });
+  }, []);
   return (
     <div className="container mt-3 mb-3">
       <div
@@ -88,15 +112,15 @@ const Home = (props) => {
       </div>
 
       <div className="mt-4">
-        <h5>Feature Films</h5>
-        <p>Some images here </p>
+        <SubTitle name="Feature Films" />
+        {movies && <FeatureMovie movies={movies} />}
       </div>
       <div className="mt-4">
-        <h5>Feature Tv Show</h5>
-        <p>Some images here </p>
+        <SubTitle name="Feature Tv Show" />
+        {tv && <FeatureTv tv={tv} />}
       </div>
       <div className="mt-4">
-        <p>Add 2 banner here </p>
+        <Content />
       </div>
     </div>
   );
