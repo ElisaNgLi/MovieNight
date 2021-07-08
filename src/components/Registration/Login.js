@@ -95,7 +95,11 @@ const Login = () => {
             </Link>
           </div>
           <div className="text-center">
-            <button type="submit" className="btn login btn-md">
+            <button
+              type="submit"
+              className="btn login btn-md"
+              onClick={() => alert("Button Click")}
+            >
               Sign In
             </button>
           </div>

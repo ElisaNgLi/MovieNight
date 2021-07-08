@@ -9,13 +9,21 @@ const SocialButton = () => {
     <div className="d-flex justify-content-center my-3">
       <div className="row">
         <div className="col">
-          <button type="submit" className="btn social btn-primary">
+          <button
+            type="submit"
+            className="btn social btn-primary"
+            onClick={() => alert("Facebook click")}
+          >
             <FacebookIcon />
             Facebook
           </button>
         </div>
         <div className="col">
-          <button type="submit" className="btn social btn-info">
+          <button
+            type="submit"
+            className="btn social btn-info"
+            onClick={() => alert("Google click")}
+          >
             <MailOutlineIcon />
             Google
           </button>

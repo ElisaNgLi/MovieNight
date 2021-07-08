@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Title from "../Style/Title";
+import FilterButton from "./FilterButton";
 
 const MovieList = () => {
   const [movies, setMovies] = useState(null);
@@ -21,6 +22,7 @@ const MovieList = () => {
         console.log(err.message);
       });
   }, []);
+
   if (isLoading) {
     return (
       <div className="container my-5 mx-5">
@@ -31,23 +33,7 @@ const MovieList = () => {
     return (
       <div className="container my-5">
         <Title name="Movies" />
-        <div className="row text-center mb-4 mt-3">
-          <div className="col">
-            <button type="button" className="btn btn-outline-info">
-              Most Watched
-            </button>
-          </div>
-          <div className="col">
-            <button type="button" className="btn btn-outline-info">
-              Release Date
-            </button>
-          </div>
-          <div className="col">
-            <button type="button" className="btn btn-outline-info">
-              Sort by Name
-            </button>
-          </div>
-        </div>
+        <FilterButton />
         <div className="row">
           {movies.map((data) => (
             <div className="col-md my-2 text-center" key={data.id}>

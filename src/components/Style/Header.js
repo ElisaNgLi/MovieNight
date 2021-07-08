@@ -79,7 +79,11 @@ const Header = () => {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-dark" type="submit">
+            <button
+              className="btn btn-outline-dark"
+              type="submit"
+              onClick={() => alert("Search Button Click")}
+            >
               Search
             </button>
           </form>

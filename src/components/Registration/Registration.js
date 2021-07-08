@@ -171,6 +171,7 @@ const Registration = () => {
               type="submit"
               className="btn sign btn-md"
               disabled={!formIsValid}
+              onClick={() => alert("You Sign Up!")}
             >
               Sign Up
             </button>

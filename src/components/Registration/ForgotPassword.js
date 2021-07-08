@@ -52,7 +52,11 @@ const ForgotPassword = () => {
               </div>
             </div>
             <div className="text-center">
-              <button type="submit" className="btn send btn-md">
+              <button
+                type="submit"
+                className="btn send btn-md"
+                onClick={() => alert("Email Send")}
+              >
                 Send email
               </button>
             </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Title from "../Style/Title";
+import FilterButton from "./FilterButton";
 
 const TvList = () => {
   const [tv, setTv] = useState(null);
@@ -32,23 +33,7 @@ const TvList = () => {
     return (
       <div className="container my-5">
         <Title name="Tv Shows" />
-        <div className="row text-center mb-4 mt-3">
-          <div className="col">
-            <button type="button" className="btn btn-outline-info">
-              Most Watched
-            </button>
-          </div>
-          <div className="col">
-            <button type="button" className="btn btn-outline-info">
-              Release Date
-            </button>
-          </div>
-          <div className="col">
-            <button type="button" className="btn btn-outline-info">
-              Sort by Name
-            </button>
-          </div>
-        </div>
+        <FilterButton />
         <div className="row">
           {tv.map((data) => (
             <div className="col-md my-2 text-center" key={data.id}>
