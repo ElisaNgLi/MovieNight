@@ -169,8 +169,8 @@ const Registration = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="btn btn-primary btn-md"
-              disable={!formIsValid}
+              className="btn sign btn-md"
+              disabled={!formIsValid}
             >
               Sign Up
             </button>

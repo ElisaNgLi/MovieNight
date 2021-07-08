@@ -52,7 +52,7 @@ const ForgotPassword = () => {
               </div>
             </div>
             <div className="text-center">
-              <button type="submit" className="btn btn-primary btn-md">
+              <button type="submit" className="btn send btn-md">
                 Send email
               </button>
             </div>
