@@ -70,10 +70,18 @@ const MovieDetails = () => {
 
             <p>{movies.overview}</p>
             <div className="text-center my-3">
-              <button type="button" className="btn btn-outline-info mx-3">
+              <button
+                type="button"
+                className="btn btn-outline-info mx-3"
+                onClick={() => alert("Rent Click")}
+              >
                 Rent $3.99
               </button>
-              <button type="button" className="btn btn-outline-info mx-3">
+              <button
+                type="button"
+                className="btn btn-outline-info mx-3"
+                onClick={() => alert("Buy Click")}
+              >
                 Buy $14.99
               </button>
             </div>
