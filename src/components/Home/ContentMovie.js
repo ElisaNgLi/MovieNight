@@ -4,45 +4,42 @@ import "./Content.css";
 import ContentImage from "./ContentImage";
 
 const Content = () => {
-  const actorImg = [
+  const movieImg = [
     {
-      title: "Viola Davis",
-      url: "https://upload.wikimedia.org/wikipedia/commons/8/85/Viola_Davis_by_Gage_Skidmore.jpg",
+      title: "Action",
+      url: "https://movies.universalpictures.com/media/nob-theatrical-fight-split-1-ondemandnow-en-us-716x1075-jpg-6087358a2c598-1.jpg",
     },
     {
-      title: "Henry Cavill",
-      url: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Henry_Cavill_by_Gage_Skidmore_2.jpg",
+      title: "Horror",
+      url: "https://upload.wikimedia.org/wikipedia/en/5/5e/Separation_2021_Film_poster.png",
     },
     {
-      title: "Awkwafina",
-      url: "https://m.media-amazon.com/images/M/MV5BMTU0NTUwNjkyN15BMl5BanBnXkFtZTgwMjM0NzEzMTI@._V1_.jpg",
+      title: "Adventure",
+      url: "https://lumiere-a.akamaihd.net/v1/images/p_rayaandthelastdragon_21294_83346778.jpeg",
     },
     {
-      title: "Meryl Streep",
-      url: "https://upload.wikimedia.org/wikipedia/commons/4/46/Meryl_Streep_December_2018.jpg",
+      title: "Comedy",
+      url: "https://upload.wikimedia.org/wikipedia/en/3/33/Luca_%282021_film%29.png",
     },
     {
-      title: "Kevin Hart",
-      url: "https://upload.wikimedia.org/wikipedia/commons/8/80/Kevin_Hart_2014_%28cropped_2%29.jpg",
+      title: "Thriller",
+      url: "https://m.media-amazon.com/images/M/MV5BNTVkODdiMjAtNmQ5Yy00OThhLTg4MDItYTZlYTFmN2E0M2M1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
     },
     {
-      title: "Tom Hiddleston",
-      url: "https://upload.wikimedia.org/wikipedia/commons/6/67/Tom_Hiddleston_%2836109110291%29_%28cropped%29.jpg",
+      title: "Drama",
+      url: "https://i.ytimg.com/vi/CQauPipThn8/movieposter_en.jpg",
     },
   ];
   return (
     <div className="container content my-5">
       <div className="row">
         <div className="col">
-          <h3 className="my-5">ACTOR'S SPOTLIGHT</h3>
+          <h3 className="text-white my-5">WHAT GENRE IS TRENDING THIS 2021</h3>
         </div>
-        {actorImg.map((data, index) => (
-          <div className="col" key={index.toString()}>
-            <ContentImage
-              key={data.toString()}
-              url={data.url}
-              title={data.title}
-            />
+        {movieImg.map((data, index) => (
+          <div className="col-lg" key={index.toString()}>
+            <ContentImage url={data.url} title={data.title} />
+            <h6 className="text-center text-white mt-2">{data.title}</h6>
           </div>
         ))}
       </div>

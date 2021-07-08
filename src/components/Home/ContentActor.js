@@ -34,15 +34,13 @@ const Content = () => {
     <div className="container content my-5">
       <div className="row">
         <div className="col">
-          <h3 className="my-5">ACTOR'S SPOTLIGHT</h3>
+          <h3 className="my-3 text-white">ACTOR'S SPOTLIGHT</h3>
+          <p className="text-white">Check out who are the hottes actor's</p>
         </div>
         {actorImg.map((data, index) => (
-          <div className="col" key={index.toString()}>
-            <ContentImage
-              key={data.toString()}
-              url={data.url}
-              title={data.title}
-            />
+          <div className="col-lg" key={index.toString()}>
+            <ContentImage url={data.url} title={data.title} />
+            <h6 className="text-center text-white mt-2">{data.title}</h6>
           </div>
         ))}
       </div>
