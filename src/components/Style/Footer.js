@@ -13,18 +13,13 @@ const Footer = () => {
         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 className="text-uppercase fw-bold mb-4">Watch</h6>
           <p>
-            <Link id="footer-link" to="/" className="text-reset">
+            <Link id="footer-link" to="/movies" className="text-reset">
               Movies
             </Link>
           </p>
           <p>
-            <Link id="footer-link" to="/" className="text-reset">
+            <Link id="footer-link" to="/tv" className="text-reset">
               TV
-            </Link>
-          </p>
-          <p>
-            <Link id="footer-link" to="/" className="text-reset">
-              Free
             </Link>
           </p>
         </div>
