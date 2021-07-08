@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import Title from "../Style/Title";
+import "./ResetPassword.css";
 
 const ResetPassword = (props) => {
   const [oldPassword, setOldPassword] = useState("");
@@ -126,7 +127,7 @@ const ResetPassword = (props) => {
               </div>
             </div>
             <div className="text-center">
-              <button type="button" className="btn btn-primary">
+              <button type="button" className="btn savepw btn-md">
                 Save
               </button>
             </div>

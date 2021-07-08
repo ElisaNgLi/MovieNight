@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import "./Account.css";
 import Title from "../Style/Title";
 
-const Account = (props) => {
+const Account = () => {
   const [validateFirstName, setValidFirstName] = useState(true);
   const [validateLastName, setValidLastName] = useState(true);
 
@@ -149,7 +149,7 @@ const Account = (props) => {
               <button
                 id="edit"
                 type="button"
-                className="btn edit btn-primary"
+                className="btn edit btn-mb"
                 onClick={handleEdit}
               >
                 Edit
@@ -157,7 +157,7 @@ const Account = (props) => {
               <button
                 id="save"
                 type="button"
-                className="btn save btn-primary"
+                className="btn save btn-mb"
                 onClick={handleSave}
               >
                 Save
@@ -165,7 +165,7 @@ const Account = (props) => {
               <button
                 id="cancel"
                 type="button"
-                className="btn cancel btn-primary"
+                className="btn cancel btn-mb"
                 onClick={handleCancel}
               >
                 Cancel
