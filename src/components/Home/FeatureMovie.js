@@ -52,8 +52,8 @@ const FeatureMovie = () => {
           arrowRight={<div style={{ fontSize: "30px" }}>{" > "}</div>}
           data={random(
             6,
-            movies.map((data) => (
-              <Link to={`/movies/${data.id}`}>
+            movies.map((data, index) => (
+              <Link to={`/movies/${data.id}`} key={index.toString()}>
                 <img
                   className="mx-2"
                   key={data.id}

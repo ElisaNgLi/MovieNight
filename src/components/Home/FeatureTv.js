@@ -52,8 +52,8 @@ const FeatureTv = () => {
           arrowRight={<div style={{ fontSize: "30px" }}>{" > "}</div>}
           data={random(
             6,
-            tv.map((data) => (
-              <Link to={`/tv/${data.id}`}>
+            tv.map((data, index) => (
+              <Link to={`/tv/${data.id}`} key={index.toString()}>
                 <img
                   className="mx-2"
                   key={data.id}
