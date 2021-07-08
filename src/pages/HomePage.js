@@ -1,17 +1,17 @@
 import React from "react";
 
-import Home from "../components/Home/Home";
+import Slider from "../components/Home/Slider";
 import FeatureMovie from "../components/Home/FeatureMovie";
 import FeatureTv from "../components/Home/FeatureTv";
-import Content from "../components/Home/Content";
+import ContentActor from "../components/Home/ContentActor";
 import ContentMovie from "../components/Home/ContentMovie";
 
 const HomePage = () => {
   return (
     <div className="container">
-      <Home />
+      <Slider />
       <FeatureMovie />
-      <Content />
+      <ContentActor />
       <FeatureTv />
       <ContentMovie />
     </div>
