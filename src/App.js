@@ -8,9 +8,12 @@ import Terms from "../src/components/Terms/Terms";
 import Registration from "../src/components/Registration/Registration";
 import Login from "./components/Registration/Login";
 import ForgotPassword from "./components/Registration/ForgotPassword";
-import Home from "./components/Home/Home";
+import Home from "./pages/HomePage";
 import Account from "./components/Account/Account";
 import ResetPassword from "./components/Account/ResetPassword";
+import MovieListing from "./components/Listing/MovieList";
+import TvList from "./components/Listing/TvList";
+import MovieDetails from "./components/Details/MovieDetails";
 
 function App() {
   return (
@@ -41,6 +44,15 @@ function App() {
           </Route>
           <Route path="/resetpassword">
             <ResetPassword />
+          </Route>
+          <Route exact path="/movies">
+            <MovieListing />
+          </Route>
+          <Route exact path="/tv">
+            <TvList />
+          </Route>
+          <Route path="/movies/:id">
+            <MovieDetails />
           </Route>
         </Switch>
         <Footer />
