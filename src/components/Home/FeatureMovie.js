@@ -9,6 +9,7 @@ const FeatureMovie = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    //if trying with local change the link back to http://localhost:8000/movies
     fetch("https://night-movie.herokuapp.com/movies")
       .then((res) => {
         return res.json();

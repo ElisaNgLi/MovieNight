@@ -10,6 +10,7 @@ const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    //if trying with local change the link back to http://localhost:8000/tv
     fetch(`https://night-movie.herokuapp.com/tv/${id}`)
       .then((res) => {
         return res.json();
