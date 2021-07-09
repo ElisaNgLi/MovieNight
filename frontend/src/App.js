@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 
-import Header from "../src/components/Style/Header";
-import Footer from "../src/components/Style/Footer";
-import AboutUs from "../src/components/AboutUs/AboutUs";
-import Terms from "../src/components/Terms/Terms";
-import Registration from "../src/components/Registration/Registration";
+import Header from "./components/Style/Header";
+import Footer from "./components/Style/Footer";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Terms from "./components/Terms/Terms";
+import Registration from "./components/Registration/Registration";
 import Login from "./components/Registration/Login";
 import ForgotPassword from "./components/Registration/ForgotPassword";
 import Home from "./components/Home/HomePage";
