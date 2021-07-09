@@ -10,7 +10,7 @@ const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/movies/${id}`)
+    fetch(`https://night-movie.herokuapp.com/movies/${id}`)
       .then((res) => {
         return res.json();
       })

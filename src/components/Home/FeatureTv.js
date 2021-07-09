@@ -9,7 +9,7 @@ const FeatureTv = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8000/tv")
+    fetch("https://night-movie.herokuapp.com/tv")
       .then((res) => {
         return res.json();
       })
