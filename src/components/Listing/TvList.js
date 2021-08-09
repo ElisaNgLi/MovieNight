@@ -10,12 +10,12 @@ const TvList = () => {
 
   useEffect(() => {
     //if trying with local change the link back to http://localhost:8000/tv
-    fetch("https://night-movie.herokuapp.com/tv")
+    fetch("http://localhost:5001/tv")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setTv(data);
+        setTv(data.body);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -42,13 +42,13 @@ const TvList = () => {
                 <img
                   className="mx-2"
                   src={data.poster_path}
-                  alt={data.name}
+                  alt={data.title}
                   width="200"
                   height="200"
                 />
               </Link>
 
-              <h5 className="mt-2">{data.name}</h5>
+              <h5 className="mt-2">{data.title}</h5>
             </div>
           ))}
         </div>

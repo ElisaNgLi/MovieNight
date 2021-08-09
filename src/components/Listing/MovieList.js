@@ -10,12 +10,12 @@ const MovieList = () => {
 
   useEffect(() => {
     //if trying with local change the link back to http://localhost:8000/movies
-    fetch("https://night-movie.herokuapp.com/movies")
+    fetch("http://localhost:5001/movies")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setMovies(data);
+        setMovies(data.body);
         setIsLoading(false);
       })
       .catch((err) => {

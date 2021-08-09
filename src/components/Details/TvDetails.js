@@ -6,17 +6,18 @@ import "./Details.css";
 
 const MovieDetails = () => {
   const { id } = useParams();
-  const [tv, setTv] = useState(null);
+  const [tv, setTv] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     //if trying with local change the link back to http://localhost:8000/tv
-    fetch(`https://night-movie.herokuapp.com/tv/${id}`)
+    fetch(`http://localhost:5001/tv/${id}`)
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setTv(data);
+        console.log(data.body);
+        setTv(data.body);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -36,54 +37,63 @@ const MovieDetails = () => {
       <div className="container my-5">
         <div className="row">
           <div className="col-lg-3 text-center">
-            <img src={tv.poster_path} alt={tv.name} width="200" height="200" />
+            <img
+              src={tv[0].poster_path}
+              alt={tv[0].title}
+              width="200"
+              height="200"
+            />
           </div>
           <div className="col-lg">
-            <h3>{tv.name}</h3>
+            <h3>{tv[0].title}</h3>
             <div className="row">
               <div className="col">
-                <h6>{tv.genre_ids.join(" | ")}</h6>
+                <h6>{tv[0].genre}</h6>
               </div>
               <div className="col">
-                <p>{tv.first_air_date}</p>
+                <p>{tv[0].release_date}</p>
               </div>
             </div>
             <div className="row">
               <div className="col-lg">
                 <ReactStars
-                  count={10}
+                  count={5}
                   size={20}
                   isHalf={true}
                   edit={false}
-                  value={tv.vote_average}
+                  value={tv[0].rating}
                   activeColor="#ffd700"
                 />
               </div>
               <div className="col">
-                <p>{tv.vote_average}</p>
+                <p>{tv[0].rating}</p>
               </div>
             </div>
 
-            <p>{tv.overview}</p>
+            <p>{tv[0].overview}</p>
             <div className="text-center my-3">
               <button
                 type="button"
                 className="btn btn-outline-info mx-3"
                 onClick={() => alert("Rent Click")}
               >
-                Rent $3.99
+                Rent ${tv[0].rent}
               </button>
               <button
                 type="button"
                 className="btn btn-outline-info mx-3"
                 onClick={() => alert("Buy Click")}
               >
-                Buy $14.99
+                Buy ${tv[0].buy}
               </button>
             </div>
           </div>
           <div className="col-lg details-backdrop text-center">
-            <img className="poster" src={tv.backdrop_path} alt={tv.name} />
+            <img
+              className="poster"
+              src={tv[0].backdrop_path}
+              alt={tv[0].title}
+            />
           </div>
         </div>
       </div>

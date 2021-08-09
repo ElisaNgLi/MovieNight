@@ -5,17 +5,16 @@ import { Link } from "react-router-dom";
 import SubTitle from "../Style/SubTitle";
 
 const FeatureMovie = () => {
-  const [movies, setMovies] = useState(null);
+  const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    //if trying with local change the link back to http://localhost:8000/movies
-    fetch("https://night-movie.herokuapp.com/movies")
+    fetch("http://localhost:5001/movies/feature?feature=true")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setMovies(data);
+        setMovies(data.body);
         setIsLoading(false);
       })
       .catch((err) => {
