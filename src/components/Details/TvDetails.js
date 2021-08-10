@@ -16,7 +16,6 @@ const MovieDetails = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data.body);
         setTv(data.body);
         setIsLoading(false);
       })

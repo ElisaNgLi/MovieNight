@@ -1,45 +1,46 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 import "./Header.css";
 import logo from "../../assets/images/movie-logo.png";
+import SearchResult from "../Home/SearchResult";
 
 const Header = () => {
-  const [data, setData] = useState([]);
-  const [search, setSearch] = useState(false);
-  const [title, setTitle] = useState("");
+  const [allData, setAllData] = useState([]);
+  const [filterData, setFilterData] = useState(allData);
+  const [search, setSearch] = useState(true);
+  const history = useHistory();
+
+  useEffect(() => {
+    const url = [
+      { url: "http://localhost:5001/tv" },
+      { url: "http://localhost:5001/movies" },
+    ];
+    const fetchStuff = async () => {
+      const results = await Promise.all(url.map((type) => fetch(type.url)));
+      const results2 = await Promise.all(results.map((res) => res.json()));
+      const movies = [results2[0].body];
+      const tv = [results2[1].body];
+      const combine = movies.concat(tv);
+      setAllData(combine);
+      setFilterData(combine);
+    };
+    fetchStuff();
+  }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
+    let value = e.target.value.toLowerCase();
+    let result = [];
+    let all = allData[0].concat(allData[1]);
+    result = all.filter((data) => {
+      return data.title.toLowerCase().search(value) !== -1;
+    });
+    setFilterData(result);
     setSearch(true);
-    let searchTitle = [];
-    if (title !== "") {
-      let searchTitleArray = [];
-      const value = title.toLowerCase();
-      searchTitle = data.filter((entry) => {
-        return entry.title.toString().toLowerCase().search(value);
-      });
-    }
+    history.push("/search");
+    console.log(result);
   };
-
-  const handleTitleChange = (titles) => {
-    setTitle(titles.target.value);
-  };
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:5001/tv/title?title=${title}`)
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       setTv(data.body);
-  //       setIsLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       setIsLoading(false);
-  //       console.log(err.message);
-  //     });
-  // });
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
@@ -114,10 +115,23 @@ const Header = () => {
               type="search"
               placeholder="Search"
               aria-label="Search"
+              // value={setValue()}
+              onChange={(event) => handleSearch(event)}
             />
-            <button className="btn btn-outline-dark" type="submit">
+            {!search && (
+              <div>
+                {filterData.map((data, index) => (
+                  <SearchResult
+                    key={index}
+                    title={data.title}
+                    poster_path={data.poster_path}
+                  />
+                ))}
+              </div>
+            )}
+            {/* <button className="btn btn-outline-dark" type="submit">
               Search
-            </button>
+            </button> */}
           </form>
         </div>
       </div>

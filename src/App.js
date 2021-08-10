@@ -15,6 +15,7 @@ import MovieListing from "./components/Listing/MovieList";
 import TvList from "./components/Listing/TvList";
 import MovieDetails from "./components/Details/MovieDetails";
 import TvDetails from "./components/Details/TvDetails";
+import Search from "./components/Home/SearchResult";
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
           </Route>
           <Route path="/tv/:id">
             <TvDetails />
+          </Route>
+          <Route path="/search">
+            <Search />
           </Route>
         </Switch>
         <Footer />
