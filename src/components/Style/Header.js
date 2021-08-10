@@ -1,47 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Header.css";
 import logo from "../../assets/images/movie-logo.png";
-import SearchResult from "../Home/SearchResult";
 
 const Header = () => {
-  const [allData, setAllData] = useState([]);
-  const [filterData, setFilterData] = useState(allData);
-  const [search, setSearch] = useState(true);
-  const history = useHistory();
-
-  useEffect(() => {
-    const url = [
-      { url: "http://localhost:5001/tv" },
-      { url: "http://localhost:5001/movies" },
-    ];
-    const fetchStuff = async () => {
-      const results = await Promise.all(url.map((type) => fetch(type.url)));
-      const results2 = await Promise.all(results.map((res) => res.json()));
-      const movies = [results2[0].body];
-      const tv = [results2[1].body];
-      const combine = movies.concat(tv);
-      setAllData(combine);
-      setFilterData(combine);
-    };
-    fetchStuff();
-  }, []);
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    let value = e.target.value.toLowerCase();
-    let result = [];
-    let all = allData[0].concat(allData[1]);
-    result = all.filter((data) => {
-      return data.title.toLowerCase().search(value) !== -1;
-    });
-    setFilterData(result);
-    setSearch(true);
-    history.push("/search");
-    console.log(result);
-  };
-
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
@@ -109,30 +72,6 @@ const Header = () => {
               </ul>
             </li>
           </ul>
-          <form className="d-flex" onSubmit={handleSearch}>
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              // value={setValue()}
-              onChange={(event) => handleSearch(event)}
-            />
-            {!search && (
-              <div>
-                {filterData.map((data, index) => (
-                  <SearchResult
-                    key={index}
-                    title={data.title}
-                    poster_path={data.poster_path}
-                  />
-                ))}
-              </div>
-            )}
-            {/* <button className="btn btn-outline-dark" type="submit">
-              Search
-            </button> */}
-          </form>
         </div>
       </div>
     </nav>
