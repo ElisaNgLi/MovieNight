@@ -5,6 +5,12 @@ import "./Header.css";
 import logo from "../../assets/images/movie-logo.png";
 
 const Header = () => {
+  const logout = () => {
+    localStorage.clear("userInfo");
+    const path = window.location.pathname;
+    window.location.pathname = path;
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
@@ -62,16 +68,49 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
                   <NavLink className="dropdown-item" to="/registration">
                     Sign Up
                   </NavLink>
                 </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                {localStorage.getItem("userLogin") === "true" ? (
+                  <li>
+                    <NavLink className="dropdown-item" to="/myaccount">
+                      My Account
+                    </NavLink>
+                  </li>
+                ) : (
+                  <li>
+                    <NavLink className="dropdown-item" to="/login">
+                      Sign In
+                    </NavLink>
+                  </li>
+                )}
+                {localStorage.getItem("userLogin") === "true" ? (
+                  <li>
+                    <NavLink className="dropdown-item" to="/resetpassword">
+                      Reset Password
+                    </NavLink>
+                  </li>
+                ) : (
+                  <li>
+                    <NavLink className="dropdown-item" to="/login">
+                      Sign In
+                    </NavLink>
+                  </li>
+                )}
               </ul>
             </li>
           </ul>
+          {localStorage.getItem("userLogin") === "true" ? (
+            <div className="navbar-item" onClick={logout}>
+              Logout
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </nav>

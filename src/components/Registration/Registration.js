@@ -8,10 +8,12 @@ import SocialButton from "./SocialButton";
 const Registration = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [validateFirstName, setValidFirstName] = useState();
   const [validateLastName, setValidLastName] = useState();
+  const [validateUsername, setValidUsername] = useState();
   const [validateEmail, setValidEmail] = useState();
   const [validatePassword, setValidPassword] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
@@ -24,6 +26,9 @@ const Registration = () => {
     setLastName(event.target.value);
   };
 
+  const handleUsername = (event) => {
+    setUsername(event.target.value);
+  };
   const handleEmail = (event) => {
     setEmail(event.target.value);
   };
@@ -40,6 +45,10 @@ const Registration = () => {
     setValidLastName(lastName.trim().length >= 2);
   };
 
+  const handleValidUsername = () => {
+    setValidUsername(username.trim().length >= 2);
+  };
+
   const handleValidEmail = () => {
     setValidEmail(email.includes("@"));
   };
@@ -52,13 +61,32 @@ const Registration = () => {
     setFormIsValid(
       firstName.trim().length >= 2 &&
         lastName.trim().length >= 2 &&
+        username.trim().length >= 2 &&
         email.includes("@") &&
         password.trim().length >= 8
     );
-  }, [firstName, lastName, email, password]);
+  }, [firstName, lastName, username, email, password]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    fetch("http://localhost:5001/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName: firstName,
+        lastName: lastName,
+        username: username,
+        email: email,
+        pasword: password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert("User created succesfully.");
+      })
+      .catch((err) => console.log(err.message));
   };
 
   return (
@@ -128,7 +156,25 @@ const Registration = () => {
               {validateLastName === false && <p>Please enter your last name</p>}
             </div>
           </div>
-          <div className="col-12">
+          <div className="col-md-6">
+            <div
+              className={`invalid-field ${
+                validateUsername === false ? "invalid" : ""
+              }`}
+            >
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Username"
+                value={username}
+                onChange={handleUsername}
+                onBlur={handleValidUsername}
+                required
+              />
+              {validateUsername === false && <p>Please provided a username</p>}
+            </div>
+          </div>
+          <div className="col-md-6">
             <div
               className={`invalid-field ${
                 validateEmail === false ? "invalid" : ""
@@ -171,7 +217,6 @@ const Registration = () => {
               type="submit"
               className="btn sign btn-md"
               disabled={!formIsValid}
-              onClick={() => alert("You Sign Up!")}
             >
               Sign Up
             </button>

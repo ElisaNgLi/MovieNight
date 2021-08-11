@@ -6,21 +6,21 @@ import Title from "../Style/Title";
 import SocialButton from "./SocialButton";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [validateEmail, setValidEmail] = useState();
+  const [validateUsername, setValidUsername] = useState();
   const [validatePassword, setValidPassword] = useState();
 
-  const handleEmail = (event) => {
-    setEmail(event.target.value);
+  const handleUsername = (event) => {
+    setUsername(event.target.value);
   };
 
   const handlePassword = (event) => {
     setPassword(event.target.value);
   };
 
-  const handleValidEmail = () => {
-    setValidEmail(email.includes("@"));
+  const handleValidUsername = () => {
+    setValidUsername(username.trim().length >= 2);
   };
 
   const handleValidPassword = () => {
@@ -29,6 +29,28 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    fetch("http://localhost:5001/auth", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        pasword: password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message === "login success ") {
+          localStorage.setItem("userInfo", data.body[0].id);
+          localStorage.setItem("userLogin", "true");
+          alert("Success");
+          window.location.pathname = "/myaccount";
+        } else {
+          alert("Something went wrong");
+        }
+      })
+      .catch((err) => console.log(err.message));
   };
 
   return (
@@ -47,21 +69,21 @@ const Login = () => {
             <div className="col-8">
               <div
                 className={`invalid-field ${
-                  validateEmail === false ? "invalid" : ""
+                  validateUsername === false ? "invalid" : ""
                 }`}
               >
                 <input
-                  type="email"
+                  type="text"
                   className="form-control"
-                  placeholder="Email"
-                  value={email}
-                  onChange={handleEmail}
-                  onBlur={handleValidEmail}
+                  placeholder="Username"
+                  value={username}
+                  onChange={handleUsername}
+                  onBlur={handleValidUsername}
                   autoFocus
                   required
                 />
-                {validateEmail === false && (
-                  <p>Please provided a valid email</p>
+                {validateUsername === false && (
+                  <p>Please provided a valid username</p>
                 )}
               </div>
             </div>
@@ -95,11 +117,7 @@ const Login = () => {
             </Link>
           </div>
           <div className="text-center">
-            <button
-              type="submit"
-              className="btn login btn-md"
-              onClick={() => alert("Button Click")}
-            >
+            <button type="submit" className="btn login btn-md">
               Sign In
             </button>
           </div>

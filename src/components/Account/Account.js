@@ -1,50 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import "./Account.css";
 import Title from "../Style/Title";
 
 const Account = () => {
+  const [user, setUser] = useState({});
   const [validateFirstName, setValidFirstName] = useState(true);
   const [validateLastName, setValidLastName] = useState(true);
+  const [validateEmail, setValidEmail] = useState(true);
 
-  const initialState = {
-    firstName: "Jane",
-    lastName: "Doe",
-    email: "jane@doe.com",
-  };
-
-  const [{ firstName, lastName, email }, setState] = useState(initialState);
-
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
-  };
-
-  const clearState = () => {
-    setState({ ...initialState });
-  };
+  useEffect(() => {
+    fetch(`http://localhost:5001/users/${localStorage.getItem("userInfo")}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setUser(data.body[0]);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
 
   const handleValidFirstName = () => {
-    setValidFirstName(firstName.trim().length >= 2 ? true : false);
+    setValidFirstName(user.firstName.trim().length >= 2 ? true : false);
   };
 
   const handleValidLastName = () => {
-    setValidLastName(lastName.trim().length >= 2 ? true : false);
+    setValidLastName(user.lastName.trim().length >= 2 ? true : false);
+  };
+
+  const handleValidEmail = () => {
+    setValidEmail(user.email.includes("@"));
   };
 
   const handleEdit = () => {
+    alert("Edit Click");
     document.getElementById("firstName").disabled = false;
     document.getElementById("lastName").disabled = false;
+    document.getElementById("email").disabled = false;
     document.getElementById("edit").style.display = "none";
     document.getElementById("save").style.display = "inline";
     document.getElementById("cancel").style.display = "inline";
   };
 
   const handleSave = () => {
+    alert("Save Click");
     if (validateFirstName === true && validateLastName === true) {
       document.getElementById("firstName").disabled = true;
       document.getElementById("lastName").disabled = true;
+      document.getElementById("email").disabled = true;
       document.getElementById("edit").style.display = "inline";
       document.getElementById("save").style.display = "none";
       document.getElementById("cancel").style.display = "none";
@@ -52,9 +58,10 @@ const Account = () => {
   };
 
   const handleCancel = () => {
-    clearState();
+    alert("Cancel Click");
     document.getElementById("firstName").disabled = true;
     document.getElementById("lastName").disabled = true;
+    document.getElementById("email").disabled = true;
     document.getElementById("edit").style.display = "inline";
     document.getElementById("save").style.display = "none";
     document.getElementById("cancel").style.display = "none";
@@ -98,8 +105,7 @@ const Account = () => {
                   className="form-control"
                   placeholder="First Name"
                   id="firstName"
-                  value={firstName}
-                  onChange={onChange}
+                  value={user.firstName}
                   onBlur={handleValidFirstName}
                   autoFocus
                   disabled
@@ -123,8 +129,7 @@ const Account = () => {
                   className="form-control"
                   placeholder="Last Name"
                   id="lastName"
-                  value={lastName}
-                  onChange={onChange}
+                  value={user.lastName}
                   onBlur={handleValidLastName}
                   disabled
                 />
@@ -133,17 +138,38 @@ const Account = () => {
                 )}
               </div>
             </div>
-            <div className="col-12">
-              <label htmlFor="email" className="form-label">
-                Email
+            <div className="col-md-6">
+              <label htmlFor="username" className="form-label">
+                Username
               </label>
               <input
-                type="email"
+                type="text"
                 className="form-control"
-                placeholder="Email"
-                value={email}
+                placeholder="Username"
+                value={user.username}
                 disabled
               />
+            </div>
+            <div className="col-md-6">
+              <div
+                className={`invalid-field ${
+                  validateEmail === false ? "invalid" : ""
+                }`}
+              >
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  className="form-control"
+                  placeholder="Email"
+                  value={user.email}
+                  onBlur={handleValidEmail}
+                  disabled
+                />
+                {validateEmail === false && <p>Please enter your email</p>}
+              </div>
             </div>
             <div className="text-center">
               <button

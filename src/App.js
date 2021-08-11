@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 
 import Header from "./components/Style/Header";
@@ -42,10 +48,18 @@ function App() {
             <Home />
           </Route>
           <Route path="/myaccount">
-            <Account />
+            {localStorage.getItem("userLogin") === "true" ? (
+              <Account />
+            ) : (
+              <Redirect to="/login" />
+            )}
           </Route>
           <Route path="/resetpassword">
-            <ResetPassword />
+            {localStorage.getItem("userLogin") === "true" ? (
+              <ResetPassword />
+            ) : (
+              <Redirect to="/login" />
+            )}
           </Route>
           <Route exact path="/movies">
             <MovieListing />
