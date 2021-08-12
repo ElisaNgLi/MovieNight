@@ -84,6 +84,7 @@ const Registration = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         alert("User created succesfully.");
       })
       .catch((err) => console.log(err.message));

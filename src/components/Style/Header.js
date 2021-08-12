@@ -7,8 +7,8 @@ import logo from "../../assets/images/movie-logo.png";
 const Header = () => {
   const logout = () => {
     localStorage.clear("userInfo");
-    const path = window.location.pathname;
-    window.location.pathname = path;
+    localStorage.clear("userLogin");
+    window.location.pathname = "/";
   };
 
   return (
@@ -63,11 +63,6 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="/forgotpassword">
-                    Forgot Password
-                  </NavLink>
-                </li>
-                <li>
                   <NavLink className="dropdown-item" to="/registration">
                     Sign Up
                   </NavLink>
@@ -83,8 +78,8 @@ const Header = () => {
                   </li>
                 ) : (
                   <li>
-                    <NavLink className="dropdown-item" to="/login">
-                      Sign In
+                    <NavLink className="dropdown-item" to="/forgotpassword">
+                      Forgot Password
                     </NavLink>
                   </li>
                 )}
@@ -95,17 +90,13 @@ const Header = () => {
                     </NavLink>
                   </li>
                 ) : (
-                  <li>
-                    <NavLink className="dropdown-item" to="/login">
-                      Sign In
-                    </NavLink>
-                  </li>
+                  ""
                 )}
               </ul>
             </li>
           </ul>
           {localStorage.getItem("userLogin") === "true" ? (
-            <div className="navbar-item" onClick={logout}>
+            <div id="logout" className="navbar-item" onClick={logout}>
               Logout
             </div>
           ) : (

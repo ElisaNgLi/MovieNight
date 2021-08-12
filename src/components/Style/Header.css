@@ -6,3 +6,7 @@ a#head-link {
   text-decoration: none;
   color: white;
 }
+
+#logout {
+  color: white;
+}
